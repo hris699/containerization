@@ -1,0 +1,80 @@
+version : "3.8"
+services:
+
+ db:
+    image: postgres
+    restart: always
+    secrets:
+      - db-password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - spring-postgres
+    environment:
+      - POSTGRES_DB=spring-postgresdb
+      - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
+    expose:
+      - 5432
+        
+    ports:
+      - 5432:5432
+
+ 
+
+ web-app:
+
+    container_name: springboot-restful-webservices
+    build:
+      context: ./
+      dockerfile: ./backend-java/Dockerfile
+    
+
+    depends_on:
+
+       - db
+
+    networks: 
+       - spring-postgres
+
+    ports:
+      - 8585:8585
+
+    environment:
+
+     - POSTGRES_DB=postgres
+     - DATASOURCE_URL=jdbc:postgresql://db:5432/${POSTGRES_DB}
+
+ pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin4_con
+    restart: always
+    ports:
+     - "80:80"
+    environment:
+     PGADMIN_DEFAULT_EMAIL: user-name@domain-name.com
+     PGADMIN_DEFAULT_PASSWORD: strong-password
+    volumes:
+     - pgadmin-data:/var/lib/pgadmin
+    networks: 
+       - spring-postgres 
+
+     
+
+ 
+
+networks:
+
+  spring-postgres:
+
+ 
+
+volumes:
+
+  db-data:
+  pgadmin-data:
+
+secrets:
+  db-password:
+    file: db-postgres/password.txt  
+    
+    

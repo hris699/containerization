@@ -1,0 +1,9 @@
+# Use a base image
+FROM dpage/pgadmin4
+
+# Set environment variables for pgAdmin username and password
+# ENV PGADMIN_DEFAULT_EMAIL=user-name@domain-name.com
+# ENV PGADMIN_DEFAULT_PASSWORD=strong-password
+
+# Expose the default pgAdmin port
+# EXPOSE 8888

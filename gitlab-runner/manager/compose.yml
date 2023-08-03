@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  fargate-gitlab-runner:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    environment:
+      - GITLAB_HOST_URL=https://gitlab.com/
+      - GITLAB_RUNNER_TOKEN=glrt-ZqjrCtUt83AAe3Df--A9
+      - GITLAB_RUNNER_NAME=test runner

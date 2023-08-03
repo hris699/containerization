@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  fargate-gitlab-runner-worker:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    environment:
+      - SSH_PUBLIC_KEY=key

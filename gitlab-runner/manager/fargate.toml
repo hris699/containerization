@@ -1,0 +1,18 @@
+LogLevel = "info"
+LogFormat = "text"
+
+[Fargate]
+  Cluster = "your-fargate-cluster-name"
+  TaskDefinition = "your-worker-task-defunition" #task-definition:1 If a revision number is not specified, the latest active revision is used.
+  Region = "your-aws-region" #us-east-2
+  Subnet = "private-subnet-id"
+  SecurityGroup = "your-worker-security-group" 
+  EnablePublicIP = false # when set to false, the VPC’s Security Group must have an inbound rule for Port 22 (SSH), where the source is the VPC CIDR.
+  UsePublicIP = false
+
+[TaskMetadata]
+  Directory = "/opt/gitlab-runner/metadata"
+
+[SSH]
+  Username = "root"
+  Port = 22

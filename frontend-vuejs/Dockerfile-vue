@@ -1,0 +1,30 @@
+# FROM node:carbon
+
+# COPY ./vue/docker/entrypoint.sh /entrypoint/
+
+# RUN ["chmod", "+x", "entrypoint/entrypoint.sh"]
+
+# # Copy or mount node app here
+# WORKDIR /data/
+
+# EXPOSE 8080
+
+# ENTRYPOINT ["/entrypoint/entrypoint.sh"]
+
+# CMD ["npm", "start"]
+
+FROM node:12.2.0-alpine
+
+# set working directory
+WORKDIR /app
+
+COPY vue/ /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+# start app
+CMD ["npm", "run", "serve"]

@@ -1,0 +1,21 @@
+<div class="bootstrap-wrapper">
+    <div class="container text-center mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+                <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="example-form">
+                    <h2 style="color: blueviolet;" class="container text-center mt">User</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="title" placeholder="Enter Name" name="name"
+                            [(ngModel)]="credentials.name" required #Uname="ngModel" /> <br>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit" color="accent">Add-User</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

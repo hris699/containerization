@@ -1,0 +1,11 @@
+[Unit]
+Description=docker service
+
+[Service]
+User=root
+WorkingDirectory=/root
+ExecStart=<script which needs to be executed>
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
