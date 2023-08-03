@@ -49,3 +49,4 @@ spec:
       protocol: TCP
       port: 80
       targetPort: frontend-port
+  type: loadBalancer
