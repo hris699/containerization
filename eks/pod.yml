@@ -45,7 +45,7 @@ spec:
       protocol: TCP
       port: 27017
       targetPort: db-port
-    - name: backend
+    - name: frontend
       protocol: TCP
       port: 80
       targetPort: frontend-port
