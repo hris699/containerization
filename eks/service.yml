@@ -8,6 +8,7 @@ metadata:
 spec:
   selector:
     app: nodejs-app
+  type: NodePort
   ports:
     # - name: backend
     #   protocol: TCP
