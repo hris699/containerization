@@ -4,19 +4,19 @@ metadata:
   name: nodejs-pod
 spec:
   containers:
-  - name: node-backend
-    image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:backend-node
-    ports:
-    - containerPort: 3080
-      name: backend-port
-    env:
-    - name: DATABASE_URL
-      value: localhost:27017
-  - name: db-mongo
-    image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:db-mongo
-    ports:
-    - containerPort: 27017
-      name: db-port
+  # - name: node-backend
+  #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:backend-node
+  #   ports:
+  #   - containerPort: 3080
+  #     name: backend-port
+  #   env:
+  #   - name: DATABASE_URL
+  #     value: localhost:27017
+  # - name: db-mongo
+  #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:db-mongo
+  #   ports:
+  #   - containerPort: 27017
+  #     name: db-port
   - name: frontend-vue
     image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:frontend-vuejs
     ports:
