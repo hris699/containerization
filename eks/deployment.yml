@@ -40,7 +40,7 @@ spec:
       - name: frontend-vue
         image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:frontend-vuejs
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         env:
         - name: API_URL
           value: localhost:3080
