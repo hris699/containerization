@@ -27,12 +27,12 @@ spec:
                 - arm64
       containers:
       - name: node-backend
-        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:backend-node
+        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:backend-python
         ports:
-        - containerPort: 3080
-      #   env:
-      #   - name: DATABASE_URL
-      #     value: localhost:27017
+        - containerPort: 8181
+        env:
+        - name: DATABASE_URL
+          value: localhost:27017
       # - name: db-mongo
       #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:db-mongo
       #   ports:
