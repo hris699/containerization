@@ -18,7 +18,7 @@ FROM node:12.2.0-alpine
 # set working directory
 WORKDIR /app
 
-COPY vue/ /app
+COPY frontend-vuejs/ /app
 
 COPY package*.json ./
 
