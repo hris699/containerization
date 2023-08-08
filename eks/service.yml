@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     app: nodejs-app
-  type: LoadBalancer
+  type: NodePort
   ports:
     # - name: backend
     #   protocol: TCP
@@ -22,3 +22,4 @@ spec:
       protocol: TCP
       port: 3000
       targetPort: 3000
+      nodePort: 31271
