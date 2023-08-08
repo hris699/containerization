@@ -10,15 +10,15 @@ spec:
     app: nodejs-app
   type: LoadBalancer
   ports:
-    - name: backend
-      protocol: TCP
-      port: 8181
-      targetPort: 8181
+    # - name: backend
+    #   protocol: TCP
+    #   port: 8181
+    #   targetPort: 8181
     # - name: db
     #   protocol: TCP
     #   port: 27017
     #   targetPort: 27017
-    # - name: frontend
-    #   protocol: HTTP
-    #   port: 3000
-    #   targetPort: 3000
+    - name: frontend
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
