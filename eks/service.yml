@@ -22,6 +22,7 @@ spec:
     #   targetPort: 27017
     - name: frontend
       protocol: TCP
-      port: 3000
+      port: 5000
       targetPort: 3000
+      nodePort: 31271
       
