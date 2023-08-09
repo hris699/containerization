@@ -14,10 +14,11 @@ spec:
       protocol: TCP
       port: 3080
       targetPort: 3080
-    - name: db
-      protocol: TCP
-      port: 27017
-      targetPort: 27017
+      nodePort: 30748
+    # - name: db
+    #   protocol: TCP
+    #   port: 27017
+    #   targetPort: 27017
     # - name: frontend
     #   protocol: TCP
     #   port: 8181
