@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-service
+  namespace: node-app
+  labels:
+    app: nodejs-db
+spec:
+  selector:
+    app: nodejs-db
+  type: NodePort
+  ports:
+    - name: db
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
+      nodePort: 32359
+    # - name: frontend
+    #   protocol: TCP
+    #   port: 3000
+    #   targetPort: 3000
+      
