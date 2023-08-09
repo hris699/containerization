@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: default
+  labels:
+    app: nodejs-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-frontend
+  template:
+    metadata:
+      labels:
+        app: nodejs-frontend
+    spec:
+      containers:
+      - name: frontend-vue
+        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:frontend-vue
+        ports:
+        - containerPort: 3000
+        env:
+        - name: API_URL
+          value: localhost:3080
