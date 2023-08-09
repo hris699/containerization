@@ -22,5 +22,5 @@ spec:
         - containerPort: 3080
         env:
         - name: DATABASE_URL
-          value: localhost:27017
+          value: 18.216.70.109:32359
       

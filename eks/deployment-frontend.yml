@@ -22,4 +22,4 @@ spec:
         - containerPort: 3000
         env:
         - name: API_URL
-          value: localhost:3080
+          value: 18.216.70.109:30748
