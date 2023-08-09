@@ -16,21 +16,21 @@ spec:
         app: nodejs-app
     spec:
       containers:
-      # - name: node-backend
-      #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:backend-python
+      - name: node-backend
+        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:backend-python
+        ports:
+        - containerPort: 3080
+        env:
+        - name: DATABASE_URL
+          value: localhost:27017
+      - name: db-mongo
+        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:db-mongo
+        ports:
+        - containerPort: 27017
+      # - name: frontend-angular
+      #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:frontend-angular
       #   ports:
       #   - containerPort: 8181
-      #   env:
-      #   - name: DATABASE_URL
-      #     value: localhost:27017
-      # - name: db-mongo
-      #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:db-mongo
-      #   ports:
-      #   - containerPort: 27017
-      - name: frontend-angular
-        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:frontend-angular
-        ports:
-        - containerPort: 8181
         # env:
         # - name: API_URL
         #   value: localhost:3080
