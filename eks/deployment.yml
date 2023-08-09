@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: node-backend
-        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:backend-python
+        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:backend-node
         ports:
         - containerPort: 3080
         env:
