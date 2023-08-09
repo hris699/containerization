@@ -23,14 +23,14 @@ spec:
         env:
         - name: DATABASE_URL
           value: localhost:27017
-      - name: db-mongo
-        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:db-mongo
-        ports:
-        - containerPort: 27017
-      # - name: frontend-angular
-      #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:frontend-angular
+      # - name: db-mongo
+      #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:db-mongo
       #   ports:
-      #   - containerPort: 8181
+      #   - containerPort: 27017
+      # - name: frontend-vue
+      #   image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:frontend-vue
+      #   ports:
+      #   - containerPort: 3000
         # env:
         # - name: API_URL
         #   value: localhost:3080

@@ -21,6 +21,9 @@ var DATABASE_URL = process.env.DATABASE_URL
 mongoose.set('strictQuery', false)
 mongoose.connect(`mongodb://${DATABASE_URL}/Blog`) 
 
+app.get('/', function (req, res) {
+    res.send('Welcome to the Node Application!');
+  });
 app.use(cookie_parser())
 app.use(bodyParser.json())
 app.use('/',userRoute)
