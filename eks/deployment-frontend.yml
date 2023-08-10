@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend-vue
-        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability:frontend-vuejs
+        image: 094853031708.dkr.ecr.us-east-2.amazonaws.com/aws-capability@sha256:3cd8d4a750bddb4310f2b157cc34e70abad76f96fec8e01369bf69e516c56a9c
         ports:
         - containerPort: 3000
         
